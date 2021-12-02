@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "TwitterApiV2SampledStreamUrl": "https://api.twitter.com/2/tweets/sample/stream",
+    "ConnectionTimeoutSeconds": 7,
+    "NextConnectionAttemptPauseSeconds": 4,
+    "MaxConnectionAttempts": 3,
+    "SecondsBeforeStatisticsReports": 3,
+    "ConsoleDisplayVerbosity":  "Detailed" 
+  }
+}

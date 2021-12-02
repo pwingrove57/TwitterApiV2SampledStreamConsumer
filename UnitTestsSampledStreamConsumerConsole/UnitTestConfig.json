@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "TwitterApiV2SampledStreamUrl": "https://api.somesite.com/2/stanley/steamer/eggroll",
+    "ConnectionTimeoutSeconds": 10,
+    "NextConnectionAttemptPauseSeconds": 4,
+    "MaxConnectionAttempts": 4,
+    "SecondsBeforeStatisticsReports": 3,
+    "ConsoleDisplayVerbosity": "Verbose"
+  }
+}
