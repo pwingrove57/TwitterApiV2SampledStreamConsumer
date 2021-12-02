@@ -20,5 +20,17 @@ namespace UnitTestsSampledStreamConsumerConsole.UnitTestUtilities
                 tweetResponseQueue.Enqueue(rawTweetResponse);
             }
         }
+        public void PopulateTweetResponseQueueWithSetTimes(ITweetResponseQueue tweetResponseQueue, uint numItems, 
+                                                           DateTime startTime, long millieSecondsToAdd, long bufferTicks)
+        {
+            for (int tweetIndex = 0; tweetIndex < numItems; tweetIndex++)
+            {
+                var rawTweetResponse = new RawTweetResponse(
+                         $"This is tweet # {tweetIndex + 1}, having queue index # {tweetIndex}", startTime);
+                tweetResponseQueue.Enqueue(rawTweetResponse);
+
+                startTime = startTime.AddTicks((millieSecondsToAdd * TimeSpan.TicksPerMillisecond) + bufferTicks);
+            }
+        }
     }
 }
