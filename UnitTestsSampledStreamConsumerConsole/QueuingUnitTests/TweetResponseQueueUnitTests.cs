@@ -9,14 +9,14 @@ namespace UnitTestsSampledStreamConsumerConsole.QueuingUnitTests
     [TestClass]
     public class TweetResponseQueueUnitTests
     {
-        private UtilityMethods utilityMethods = new UtilityMethods();
+        private readonly UtilityMethods _utilityMethods = new UtilityMethods();
 
         [TestMethod]
         public void VerifyThatGetRawTweetResponseByIndexMethodReturnsTheCorrectTweet()
         {
             ITweetResponseQueue tweetResponseQueue = new TweetResponseQueue();
 
-            utilityMethods.PopulateTweetResponseQueue(tweetResponseQueue, 300);
+            _utilityMethods.PopulateTweetResponseQueue(tweetResponseQueue, 300);
 
             Assert.AreEqual("This is tweet # 1, having queue index # 0",
                 tweetResponseQueue.GetRawTweetResponseByIndex(0).RawMessage);
@@ -33,7 +33,7 @@ namespace UnitTestsSampledStreamConsumerConsole.QueuingUnitTests
         {
             ITweetResponseQueue tweetResponseQueue = new TweetResponseQueue();
 
-            utilityMethods.PopulateTweetResponseQueue(tweetResponseQueue, 300);
+            _utilityMethods.PopulateTweetResponseQueue(tweetResponseQueue, 300);
 
             Assert.AreEqual("Index out of bounds: -1", 
                 tweetResponseQueue.GetRawTweetResponseByIndex(-1).RawMessage);
@@ -51,7 +51,7 @@ namespace UnitTestsSampledStreamConsumerConsole.QueuingUnitTests
             ITweetResponseQueue tweetResponseQueue = new TweetResponseQueue();
 
             tweetResponseQueue.StartTime = DateTime.Now;
-            utilityMethods.PopulateTweetResponseQueue(tweetResponseQueue, 444);
+            _utilityMethods.PopulateTweetResponseQueue(tweetResponseQueue, 444);
 
             tweetResponseQueue.StartTime = DateTime.Now;
 
