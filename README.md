@@ -30,6 +30,8 @@ Normal: Should show the tweet averages, and the tweet count for each tweet
 Detailed: Should show the tweet averages, as well as the tweet count and received 'ticks' for that tweet
 Verbose: Should show all of the information above, plus the tweet itself.
 
+NOTE: Press the ESC key to end the program.
+
 # Tools Used
 The SampledStreamConsumerConsole application was built using these tools/frameworks:
 C#
